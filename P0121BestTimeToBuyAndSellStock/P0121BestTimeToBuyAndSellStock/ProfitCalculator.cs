@@ -9,7 +9,7 @@ public static class ProfitCalculator
         var prices = new int[pricesCount];
         for (int i = 0; i < prices.Length; i++)
         {
-            prices[i] = Random.Shared.Next();
+            prices[i] = Random.Shared.Next(elementsMinValue, elementsMaxValue);
         }
 
         return prices;
