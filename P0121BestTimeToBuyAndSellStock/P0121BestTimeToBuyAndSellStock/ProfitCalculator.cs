@@ -2,7 +2,9 @@
 
 public static class ProfitCalculator
 {
-    public static int[] GetTestPrices(int pricesCount = 100000)
+    public static int[] GetTestPrices(int pricesCount = 100000, 
+        int elementsMinValue = 0,
+        int elementsMaxValue = Int32.MaxValue)
     {
         var prices = new int[pricesCount];
         for (int i = 0; i < prices.Length; i++)
