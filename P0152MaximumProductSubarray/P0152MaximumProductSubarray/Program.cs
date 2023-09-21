@@ -66,7 +66,7 @@ namespace P0152MaximumProductSubarray
             return stopwatch.Elapsed;
         }
 
-        private static void Check(int[] nums, bool print)
+        private static bool Check(int[] nums, bool print)
         {
             var solveStupid = Stupid.Solve(nums);
             var solveFromBorders = Caterpillar.SolveFromBorders(nums);
@@ -87,8 +87,7 @@ namespace P0152MaximumProductSubarray
                 Console.WriteLine();
             }
 
-            if (solveSequentially != solveStupid || solveStupid != solveFromBorders)
-                throw new Exception();
+            return solveSequentially == solveStupid && solveStupid == solveFromBorders;
         }
     }
 }

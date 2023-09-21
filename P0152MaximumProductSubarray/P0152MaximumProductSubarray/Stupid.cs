@@ -1,6 +1,6 @@
 ﻿namespace P0152MaximumProductSubarray;
 
-internal static class Stupid
+public static class Stupid
 {
     public static int Solve(int[] nums)
     {

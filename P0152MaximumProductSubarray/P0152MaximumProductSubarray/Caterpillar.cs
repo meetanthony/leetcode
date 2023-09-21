@@ -1,6 +1,6 @@
 ﻿namespace P0152MaximumProductSubarray;
 
-internal static class Caterpillar
+public static class Caterpillar
 {
     public static int SolveFromBorders(int[] nums)
     {
