@@ -1,18 +1,20 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P0094BinaryTreeInorderTraversal", "P0094BinaryTreeInorderTraversal\P0094BinaryTreeInorderTraversal.csproj", "{710DB210-B384-432D-B961-FD9B60AA9DAB}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P0094BinaryTreeInorderTraversal", "P0094BinaryTreeInorderTraversal\P0094BinaryTreeInorderTraversal.csproj", "{710DB210-B384-432D-B961-FD9B60AA9DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Debug|x86.ActiveCfg = Debug|x86
-		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Debug|x86.Build.0 = Debug|x86
-		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Release|x86.ActiveCfg = Release|x86
-		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Release|x86.Build.0 = Release|x86
+		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710DB210-B384-432D-B961-FD9B60AA9DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
