@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Common.TestData;
 
-public class BrutforceArrays<T> : IEnumerable<T[]> where T : INumber<T>
+public class BruteForceArrays<T> : IEnumerable<T[]> where T : INumber<T>
 {
     public class Enumerator : IEnumerator<T[]>
     {
@@ -65,7 +65,7 @@ public class BrutforceArrays<T> : IEnumerable<T[]> where T : INumber<T>
 
     public long CasesCount { get; }
 
-    public BrutforceArrays(int itemsCount, T minPossibleValue, T maxPossibleValue)
+    public BruteForceArrays(int itemsCount, T minPossibleValue, T maxPossibleValue)
     {
         ItemsCount = itemsCount;
         MinPossibleValue = minPossibleValue; 

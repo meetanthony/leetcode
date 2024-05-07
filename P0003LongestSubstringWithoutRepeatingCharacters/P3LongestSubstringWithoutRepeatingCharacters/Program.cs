@@ -7,7 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var brutforceArrays = new BrutforceArrays<char>(10, 'a', 'd');
+        var brutforceArrays = new BruteForceArrays<char>(10, 'a', 'd');
         var casesCount = brutforceArrays.CasesCount;
         Console.WriteLine($"brutforce cases: {casesCount}");
 
