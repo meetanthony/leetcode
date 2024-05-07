@@ -1,50 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿namespace P3LongestSubstringWithoutRepeatingCharacters;
 
-namespace P3LongestSubstringWithoutRepeatingCharacters
+internal class Program
 {
-    class Program
+
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(LengthOfLongestSubstring("abcabcbb"));
-            Console.WriteLine(LengthOfLongestSubstring("bbbbb"));
-            Console.WriteLine(LengthOfLongestSubstring("pwwkew"));
-            Console.WriteLine(LengthOfLongestSubstring(""));
+        Test(new HashSetCounter());
+        Console.WriteLine();
+        Test(new DictionaryCounter());
 
-            Console.ReadLine();
-        }
+        Console.ReadLine();
+    }
 
-        public static int LengthOfLongestSubstring(string s)
-        {
-            int max = 0;
-            for (int i = 0; i < s.Length; i++)
-            {
-                var l = LengthOfLongestSubstring(s, i);
-                if (max < l)
-                    max = l;
-            }
+    private static bool Test(ILengthCounter counter)
+    {
+        var result = true;
+        result &= Test(counter, "abcabcbb", 3);
+        result &= Test(counter, "bbbbb", 1);
+        result &= Test(counter, "pwwkew", 3);
+        result &= Test(counter, "", 0);
 
-            return max;
-        }
-        
-        public static int LengthOfLongestSubstring(string s, int start)
-        {
-            HashSet<char> hashSet = new HashSet<char>();
-            var c = s[start];
-            int count = 0;
-            while (hashSet.Contains(c) == false)
-            {
-                hashSet.Add(c);
-                count++;
-                if (start + count == s.Length)
-                    return count;
-                c = s[start + count];
-            }
+        return result;
+    }
 
-            return count;
-        }
+    private static bool Test(ILengthCounter counter, string testStr, int rightAnswer)
+    {
+        var calculatedLength = counter.GetLength(testStr);
+        Console.WriteLine($"{calculatedLength} == {rightAnswer} = {calculatedLength == rightAnswer}");
+
+        return rightAnswer == calculatedLength;
     }
 }
