@@ -14,7 +14,11 @@ internal class DictionaryCounter : ILengthCounter
             
             if (d.TryGetValue(s, out var oldIndex))
             {
-                counter = i - oldIndex;
+                var length = i - oldIndex;
+                if (length <= counter)
+                    counter = length;
+                else
+                    counter++;
                 d[s] = i;
             }
             else
