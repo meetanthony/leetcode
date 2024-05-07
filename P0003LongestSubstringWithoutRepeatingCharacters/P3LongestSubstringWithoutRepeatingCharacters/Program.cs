@@ -1,5 +1,4 @@
 ﻿using Common.TestData;
-using System.Text;
 
 namespace P3LongestSubstringWithoutRepeatingCharacters;
 
@@ -13,7 +12,8 @@ internal class Program
 
         var stopUi = false;
 
-        var hashCounter = new HashSetCounter();
+        var slidingHashCounter = new SlidingHashSetCounter();
+        var hashCounter = new SlidingHashSetCounter();
         var dictCounter = new DictionaryCounter();
 
         long arraysCounter = 0;
@@ -34,10 +34,10 @@ internal class Program
         foreach (var array in brutforceArrays)
         {
             var str = new string(array);
-
+            var slidingHashLength = slidingHashCounter.GetLength(str);
             var hashLength = hashCounter.GetLength(str);
             var dictLength = dictCounter.GetLength(str);
-            if (hashLength != dictLength)
+            if (hashLength != dictLength || dictLength != slidingHashLength)
                 throw new Exception(str);
 
             arraysCounter++;
