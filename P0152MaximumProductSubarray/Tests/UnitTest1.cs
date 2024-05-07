@@ -8,7 +8,7 @@ namespace Tests
         [Fact]
         public void Test1()
         {
-            var brutforceArrays = new BrutforceArrays(5, -3, 3);
+            var brutforceArrays = new BruteForceArrays<int>(5, -3, 3);
             foreach (var nums in brutforceArrays)
             {
                 var solveStupid = Stupid.Solve(nums);

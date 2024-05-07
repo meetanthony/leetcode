@@ -21,7 +21,7 @@ namespace P0152MaximumProductSubarray
             stopwatch.Start();
             for (int i = 5; i < 10; i++)
             {
-                var brutforceArrays = new BrutforceArrays(i, minPossibleValue, maxPossibleValue);
+                var brutforceArrays = new BruteForceArrays<int>(i, minPossibleValue, maxPossibleValue);
                 Console.WriteLine("Cases count: " + brutforceArrays.CasesCount);
                 foreach (var array in brutforceArrays)
                 {
@@ -56,7 +56,7 @@ namespace P0152MaximumProductSubarray
 
             for (int i = startElementsCount; i < endElementsCount; i++)
             {
-                var brutforceArrays = new BrutforceArrays(i, minPossibleValue, maxPossibleValue);
+                var brutforceArrays = new BruteForceArrays<int>(i, minPossibleValue, maxPossibleValue);
                 foreach (var array in brutforceArrays)
                 {
                     solveDelegate(array);
