@@ -1,22 +1,21 @@
 ﻿using System.Collections;
+using System.Numerics;
 
 namespace Common.TestData;
 
-public class BrutforceArrays : IEnumerable<int[]>
+public class BrutforceArrays<T> : IEnumerable<T[]> where T : INumber<T>
 {
-    public class Enumerator : IEnumerator<int[]>
+    public class Enumerator : IEnumerator<T[]>
     {
-        public int MinPossibleValue { get; }
-        public int MaxPossibleValue { get; }
+        public T MinPossibleValue { get; }
+        public T MaxPossibleValue { get; }
 
-
-        public Enumerator(int itemsCount, int minPossibleValue, int maxPossibleValue)
+        public Enumerator(int itemsCount, T minPossibleValue, T maxPossibleValue)
         {
             MinPossibleValue = minPossibleValue;
             MaxPossibleValue = maxPossibleValue;
-
-
-            Current = new int[itemsCount];
+            
+            Current = new T[itemsCount];
             Reset();
         }
 
@@ -25,7 +24,7 @@ public class BrutforceArrays : IEnumerable<int[]>
             return Increment(Current, MinPossibleValue, MaxPossibleValue);
         }
 
-        private static bool Increment(int[] nums, int minPossibleValue, int maxPossibleValue)
+        private static bool Increment(T[] nums, T minPossibleValue, T maxPossibleValue)
         {
             int currentElement = 0;
             while (currentElement < nums.Length)
@@ -50,7 +49,7 @@ public class BrutforceArrays : IEnumerable<int[]>
                 Current[0]--;
         }
 
-        public int[] Current { get; }
+        public T[] Current { get; }
 
         object IEnumerator.Current => Current;
 
@@ -61,21 +60,23 @@ public class BrutforceArrays : IEnumerable<int[]>
     }
 
     public int ItemsCount { get; }
-    public int MinPossibleValue { get; }
-    public int MaxPossibleValue { get; }
+    public T MinPossibleValue { get; }
+    public T MaxPossibleValue { get; }
 
-    public int CasesCount { get; }
+    public long CasesCount { get; }
 
-    public BrutforceArrays(int itemsCount, int minPossibleValue, int maxPossibleValue)
+    public BrutforceArrays(int itemsCount, T minPossibleValue, T maxPossibleValue)
     {
         ItemsCount = itemsCount;
         MinPossibleValue = minPossibleValue; 
         MaxPossibleValue = maxPossibleValue;
 
-        CasesCount = (int)Math.Pow(MaxPossibleValue - MinPossibleValue + 1, ItemsCount);
+        T diff = MaxPossibleValue - MinPossibleValue;
+        
+        CasesCount = (long)Math.Pow(Convert.ToInt64(diff) + 1, ItemsCount);
     }
 
-    public IEnumerator<int[]> GetEnumerator()
+    public IEnumerator<T[]> GetEnumerator()
     {
         return new Enumerator(ItemsCount, MinPossibleValue, MaxPossibleValue);
     }
