@@ -6,14 +6,14 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var brutforceArrays = new BruteForceArrays<char>(10, 'a', 'd');
+        var brutforceArrays = new BruteForceArrays<char>(8, 'a', 'h');
         var casesCount = brutforceArrays.CasesCount;
         Console.WriteLine($"brutforce cases: {casesCount}");
 
         var stopUi = false;
 
         var slidingHashCounter = new SlidingHashSetCounter();
-        var hashCounter = new SlidingHashSetCounter();
+        var hashCounter = new HashSetCounter();
         var dictCounter = new DictionaryCounter();
 
         long arraysCounter = 0;

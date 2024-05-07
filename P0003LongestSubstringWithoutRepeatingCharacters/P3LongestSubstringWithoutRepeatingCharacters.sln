@@ -6,6 +6,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3LongestSubstringWithoutRe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.TestData", "..\Common.TestData\Common.TestData.csproj", "{AA17FBC4-ECF7-42B3-9DAE-F24A30A04B16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{D7983867-6DC5-4B66-B3FD-8C6759992AAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,15 @@ Global
 		{AA17FBC4-ECF7-42B3-9DAE-F24A30A04B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA17FBC4-ECF7-42B3-9DAE-F24A30A04B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA17FBC4-ECF7-42B3-9DAE-F24A30A04B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7983867-6DC5-4B66-B3FD-8C6759992AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7983867-6DC5-4B66-B3FD-8C6759992AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7983867-6DC5-4B66-B3FD-8C6759992AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7983867-6DC5-4B66-B3FD-8C6759992AAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B764658-B462-4C80-B9ED-BDD222DDD37E}
 	EndGlobalSection
 EndGlobal

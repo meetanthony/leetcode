@@ -1,6 +1,6 @@
 ﻿namespace P3LongestSubstringWithoutRepeatingCharacters;
 
-interface ILengthCounter
+public interface ILengthCounter
 {
     int GetLength(string s);
 }

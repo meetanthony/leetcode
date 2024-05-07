@@ -1,6 +1,6 @@
 ﻿namespace P3LongestSubstringWithoutRepeatingCharacters;
 
-internal class SlidingHashSetCounter : ILengthCounter
+public class SlidingHashSetCounter : ILengthCounter
 {
     public static int LengthOfLongestSubstring(string s)
     {
